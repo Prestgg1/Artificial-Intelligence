@@ -1,0 +1,220 @@
+@import "reset.scss";
+
+
+@mixin ortalama{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loading{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    @include ortalama();
+    background-size: cover;
+    background: white;
+
+}
+
+body,html{
+    height: 100%;
+    font-family: Open Sans;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-style: normal;
+}
+
+header,main{
+    background-image: linear-gradient(to right,#0A131E,90%,rgba(0, 0, 0, 0.925));
+}
+header{
+    backdrop-filter: blur(100px);
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px;
+    *{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .logo{
+        gap: 15px;
+        cursor: pointer;
+        @include ortalama();
+        h2{
+            font-size: 100%;
+            /* font-size: 22.545px; */
+            color: #3A68B8;
+        }
+    }
+    nav{
+        display: none;
+        ul{
+            color: white;
+            height: 100%;
+            @include ortalama();
+            gap: 40px;
+            li{
+                transition: 0.2s all;
+                color: white;
+                
+            }
+            li:hover{
+                transition: 0.2s all ease-in;
+                transform: scale(1.5);
+                color: #3A68B8;
+            }
+        }
+    }
+    .blok{
+        gap: 10px;
+        i.fa-bars{
+            display: block;
+            color: white;
+            font-size: 20px;
+
+        }
+        @include ortalama();
+        button{
+            background-color: #3A68B8;
+            border: 0;
+            border-radius: 5px;
+            font-size: 10px;
+            padding: 10px;
+            color: white;
+
+        }
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    .orta{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        section:first-child{
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            justify-content:center;
+            flex-basis: 50%;
+            flex-direction: column;
+            h5{
+                color: #3A68B8;
+                font-size: clamp(100%,2vw,18px);
+                text-transform: uppercase;
+                font-weight: 600;
+                line-height: 160%
+            }
+            h1{
+                font-size: clamp(100%,4vw,55px);
+                font-weight: 800;
+                color: white;
+                line-height: 130%;
+            }
+            p{
+                color: white;
+                font-size: 18px;
+                opacity: 0.7;
+                font-weight: 600;
+                width: 80%;
+                line-height: 160%;
+            }
+            .buttons{
+                display: flex;
+            }
+            button{
+                margin: 10px;
+                background: #3A68B8;
+                color: white;
+                border: 0;
+                border-radius: 5px;
+                @include ortalama();
+                text-align: center;
+                font-size: clamp(80%,15px,20px);
+                padding: clamp(2px,2vw,20px) clamp(2px,4vw,20px) clamp(2px,2vw,20px) clamp(2px,4vw,20px);
+                font-weight: 600;
+                img{
+                    vertical-align: middle;
+                    height: 15px;
+                    padding: 0 10px 0px 0px;
+                }
+            }
+        }
+        .bir{
+            background: url("/assets/image/image.png") no-repeat center;
+            background-size: 100% 80%;
+            flex-basis: 50%;
+        }
+    }
+    .logos{
+        padding: 10px;
+        margin-top: 4vh;
+        height: 40px;
+        width: 80%;
+        gap: 20px;
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: space-around;
+        img{
+            height: 100%;
+            width: 25%;
+    }}
+}
+
+@media(min-width:800px){
+    header{
+        justify-content: space-around;
+        .logo h2{
+            font-size: clamp(10px,2vw,22.3px);
+        }
+        nav{
+            display: block;
+            ul{
+                li{
+                    font-size: clamp(1px,2vw,16px);
+                }
+            }
+        }
+        .blok{
+            button{
+                padding: 10px 20px 10px 20px;
+                font-size: 16px;
+            }
+            i.fa-bars{
+                display: none;
+            }
+        }
+    }
+    main{
+        .orta{
+            width: 80%;
+        }
+        .logos{
+            margin-top: 8vh;
+            
+            img{
+                width: 300px;
+                flex: 0 0;
+                &:hover{
+                    transition: 250ms transform;
+                    transform: skew(10deg) scale(1.2);
+                }
+            }
+            img:nth-child(3),img:nth-child(4){
+                display: block;
+            }
+        }
+    }
+}

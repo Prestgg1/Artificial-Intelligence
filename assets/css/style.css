@@ -1,0 +1,272 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a {
+  text-decoration: none;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background: white;
+}
+
+body, html {
+  height: 100%;
+  font-family: Open Sans;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-style: normal;
+}
+
+header, main {
+  background-image: linear-gradient(to right, #0A131E, 90%, rgba(0, 0, 0, 0.925));
+}
+
+header {
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 10px;
+}
+header * {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+header .logo {
+  gap: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo h2 {
+  font-size: 100%;
+  /* font-size: 22.545px; */
+  color: #3A68B8;
+}
+header nav {
+  display: none;
+}
+header nav ul {
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+header nav ul li {
+  transition: 0.2s all;
+  color: white;
+}
+header nav ul li:hover {
+  transition: 0.2s all ease-in;
+  transform: scale(1.5);
+  color: #3A68B8;
+}
+header .blok {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .blok i.fa-bars {
+  display: block;
+  color: white;
+  font-size: 20px;
+}
+header .blok button {
+  background-color: #3A68B8;
+  border: 0;
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 10px;
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+main .orta {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+main .orta section:first-child {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  flex-basis: 50%;
+  flex-direction: column;
+}
+main .orta section:first-child h5 {
+  color: #3A68B8;
+  font-size: clamp(100%, 2vw, 18px);
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 160%;
+}
+main .orta section:first-child h1 {
+  font-size: clamp(100%, 4vw, 55px);
+  font-weight: 800;
+  color: white;
+  line-height: 130%;
+}
+main .orta section:first-child p {
+  color: white;
+  font-size: 18px;
+  opacity: 0.7;
+  font-weight: 600;
+  width: 80%;
+  line-height: 160%;
+}
+main .orta section:first-child .buttons {
+  display: flex;
+}
+main .orta section:first-child button {
+  margin: 10px;
+  background: #3A68B8;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(80%, 15px, 20px);
+  padding: clamp(2px, 2vw, 20px) clamp(2px, 4vw, 20px) clamp(2px, 2vw, 20px) clamp(2px, 4vw, 20px);
+  font-weight: 600;
+}
+main .orta section:first-child button img {
+  vertical-align: middle;
+  height: 15px;
+  padding: 0 10px 0px 0px;
+}
+main .orta .bir {
+  background: url("/assets/image/image.png") no-repeat center;
+  background-size: 100% 80%;
+  flex-basis: 50%;
+}
+main .logos {
+  padding: 10px;
+  margin-top: 4vh;
+  height: 40px;
+  width: 80%;
+  gap: 20px;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-around;
+}
+main .logos img {
+  height: 100%;
+  width: 25%;
+}
+
+@media (min-width: 800px) {
+  header {
+    justify-content: space-around;
+  }
+  header .logo h2 {
+    font-size: clamp(10px, 2vw, 22.3px);
+  }
+  header nav {
+    display: block;
+  }
+  header nav ul li {
+    font-size: clamp(1px, 2vw, 16px);
+  }
+  header .blok button {
+    padding: 10px 20px 10px 20px;
+    font-size: 16px;
+  }
+  header .blok i.fa-bars {
+    display: none;
+  }
+  main .orta {
+    width: 80%;
+  }
+  main .logos {
+    margin-top: 8vh;
+  }
+  main .logos img {
+    width: 300px;
+    flex: 0 0;
+  }
+  main .logos img:hover {
+    transition: 250ms transform;
+    transform: skew(10deg) scale(1.2);
+  }
+  main .logos img:nth-child(3), main .logos img:nth-child(4) {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
